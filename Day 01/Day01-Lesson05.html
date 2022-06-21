@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 01 - Lesson 05</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ani Ruhil" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/sfah.css" type="text/css" />
+    <link rel="stylesheet" href="css/footerheader.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Day 01 - Lesson 05
+]
+.subtitle[
+## Data Language, Needs, Uses, and Relation to Effect Sizes
+]
+.author[
+### Ani Ruhil
+]
+.institute[
+### EBITE 2022
+]
+.date[
+### Updated 2022-06-21
+]
+
+---
+
+
+
+
+
+
+
+
+#### .heat[ Agenda ]
+
+.medium[
+* The "Typical" student ... no Heffalump for sure!  
+
+* Visualize, visualize, visualize 
+
+* Crazy little thing called _Confounding_ 
+
+* _Equivalence_, _Attrition_, &amp; _Bias_ 
+]
+
+---
+
+#### .heat[Typical: The Mean]  
+
+.medium[ 
+* Numeric data used ... test scores, number of days absent, number of disciplinary incidents, and so on 
+
+* Question of interest: How did the "average", the "typical" student do?  
+
+* Default answer will be from calculating the Mean ... add all students' scores, divide by the number of students, and voila!  
+
+    * Example: 7 students’ scores on 10-point quiz: 1, 5, 6, 7, 7, 10, 10 
+    
+    * Mean = 6.6
+
+]
+
+---
+
+#### .heat[Typical: The Median]
+
+.medium[ 
+* Mean intuitive, extensively used, but influenced by a few extreme scores ... notice that 4 out of 7 students scored 7 or higher but the "average" is **&lt; 7**, because of the student who scored **1** 
+
+* In these situations the Median better represents the "average", the "typical" score 
+
+* Calculated by lining up the scores in ascending or descending order and finding the mid-point 
+    * Example: 7 students’ scores on 10-point quiz: 1, 5, 6, 7, 7, 10, 10 
+    * Midpoint is highlighted: 1, 5, 6, **[7]**, 7, 10, 10 
+    * Notice how the "average" now is 7 
+
+]
+
+---
+
+#### .heat[Typical: The Mode]
+
+.medium[
+* Designed for non-numeric data (Gifted, LEP, FRL, Gender, etc) 
+
+* Most intuitive of the three because people understand “the typical student is a Gifted student”, “the typical student in our district is rated Above Proficient on the 3rd Grade ELA assessment”, etc. 
+
+* You can flip numeric data into non-numeric data by grouping numeric data 
+]
+
+---
+
+
+
+.panelset[
+
+.panel[.panel-name[Example-01]
+
+&lt;table class="table table-striped" style="margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Scale Score Ranges in English Language Arts, 2017-18&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Grade/Subject &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Limited &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Basic &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Proficient &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Accelerated &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Advanced &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Grade 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 545-671 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 672-699 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 700-724 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 725-751 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 752-863 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Grade 4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 549-673 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 674-699 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 700-724 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 725-752 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 753-846 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Grade 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 552-668 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 669-699 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 700-724 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 725-754 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 755-848 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Grade 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 555-667 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 668-699 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 700-724 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 725-750 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 751-851 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Grade 7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 568-669 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 670-699 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 700-724 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 725-748 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 749-833 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Grade 8 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 586-681 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 682-699 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 700-724 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 725-743 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 744-805 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; English language arts I &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 606-682 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 683-699 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 700-724 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 725-738 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 739-800 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; English language arts II &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 597-678 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 679-699 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 700-724 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 725-741 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 742-808 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.panel[.panel-name[Example-02]
+&lt;table class="table table-striped" style="margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Third Grade Reading Guarantee Performance Level Scale Score Ranges, 2017-18&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Grade and Subject &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Does not meet promotion standards &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Meets promotion standards &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Grade 3 ELA Scale Score &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Below 672 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; At or Above 672 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+]
+
+---
+
+#### .heat[Don't forget variability!]
+
+&lt;img src="Day01-Lesson05_files/figure-html/unnamed-chunk-4-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+#### Range = (Maximum - Minimum) a useful rough measure of variability
+
+---
+
+#### .heat[.medium[Always look at your data!!]]
+
+.panelset[
+
+
+
+.panel[.panel-name[`How things look`]
+
+&lt;table class="table table-striped" style="font-size: 14px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; dataset &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Mean of x &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Mean of y &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Variation of x &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; away &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; bullseye &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; circle &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; dino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; dots &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; h_lines &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; high_lines &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; slant_down &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; slant_up &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; star &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; v_lines &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; wide_lines &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; x_shape &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26.9 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.panel[.panel-name[`How things really are`]
+
+&lt;img src="Day01-Lesson05_files/figure-html/unnamed-chunk-7-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+]
+
+]
+
+---
+
+#### .heat[Confounding]
+
+&lt;center&gt;&lt;img src="https://www.qualitymatters.org/sites/default/files/article-faq-images/research-confusion-500px.jpg"&gt;&lt;/center&gt;
+&lt;center&gt;Image Source: Quality Matters&lt;/center&gt;
+
+---
+
+#### .heat[Confounding commonly seen by WWC reviewers ...]
+
+&lt;img src="exhibit03.png" width="100%" style="display: block; margin: auto;" /&gt;
+Source: [What Works Clearinghouse Standards Brief: Confounding](https://ies.ed.gov/ncee/wwc/Docs/referenceresources/wwc_brief_confounds_101117.pdf) 
+
+---
+
+#### .heat[Baseline Equivalence]
+
+.medium[
+* When two groups are similar at the start of a study (baseline) and, after that, the only difference between the groups is that one receives the intervention and the other does not, it is reasonable to conclude that any differences in the outcomes that are measured at the end of a study (follow-up) are caused by the intervention. 
+
+* However, if the two groups are __different at baseline on key characteristics that could influence the outcomes__, the effect found at the end of the study might be due to the differences that already existed at the beginning. 
+
+* Demonstrating baseline equivalence is important in studies that did not assign participants randomly to the intervention and comparison groups. 
+
+* It is also important in **random assignment** studies with high **attrition**.
+
+]
+
+---
+
+&lt;img src="baseline.png" width="100%" style="display: block; margin: auto;" /&gt;
+Source: [What Works Clearinghouse Standards Brief: Baseline Equivalence](https://ies.ed.gov/ncee/wwc/Docs/referenceresources/wwc_brief_baseline_080715.pdf) 
+
+---
+
+#### .heat[Attrition: Losing participants over time]
+
+.panelset[
+.panel[.panel-name[`Sources of Attrition`]
+
+&lt;img src="figure01.png" width="50%" style="display: block; margin: auto;" /&gt;
+Source: [What Works Clearinghouse Standards Brief: Attrition](https://ies.ed.gov/ncee/wwc/docs/referenceresources/wwc_brief_attrition_080715.pdf)
+
+]
+
+.panel[.panel-name[`Potential Consequences of Attrition`]
+
+&lt;img src="figure02.png" width="100%" style="display: block; margin: auto;" /&gt;
+Source: [What Works Clearinghouse Standards Brief: Attrition](https://ies.ed.gov/ncee/wwc/docs/referenceresources/wwc_brief_attrition_080715.pdf)
+
+]
+
+.panel[.panel-name[`Potential Bias`]
+
+.medium[Bias .. the difference between 
+
+* the impact estimated using data from a sample experiencing attrition .heat[versus ...]  
+
+* the true impact that would have been estimated had there been no attrition]
+
+]
+
+]
+
+---
+
+class: inverse, middle, center
+
+# .fancy[.salt[Questions??]]
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "monokai",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false,
+"click": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

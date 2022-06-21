@@ -1,0 +1,11 @@
+data.table
+ggplot2
+datasauRus
+tidyverse
+tibble
+tidyr
+readr
+purrr
+dplyr
+stringr
+forcats
