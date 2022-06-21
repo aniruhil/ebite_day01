@@ -353,7 +353,7 @@ class: inverse, middle, center
 ]
 
 ```{r}
-countdown::countdown(minutes = 5, top = 0)
+countdown::countdown(minutes = 10, top = 0)
 ```
 
 ---
@@ -476,7 +476,7 @@ DT::datatable(midf, options = list(
 
 class: inverse, middle, center
 
-# Data Activity (3)
+# Data Activity (2)
 
 ---
 
