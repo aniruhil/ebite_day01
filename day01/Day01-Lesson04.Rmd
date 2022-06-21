@@ -366,7 +366,7 @@ countdown::countdown(minutes = 10, top = 0)
 
 .panel[.panel-name[Ohio]
 
-```{r, out.width = "45%"}
+```{r, out.width = "40%"}
 knitr::include_graphics("ohio-data.png")
 ```
 
@@ -375,7 +375,7 @@ knitr::include_graphics("ohio-data.png")
 
 .panel[.panel-name[US Virgin Islands]
 
-```{r, out.width = "45%"}
+```{r, out.width = "40%"}
 knitr::include_graphics("usvi-data.png")
 ```
 
@@ -385,7 +385,7 @@ knitr::include_graphics("usvi-data.png")
 
 .panel[.panel-name[Michigan]
 
-```{r, out.width = "55%"}
+```{r, out.width = "40%"}
 knitr::include_graphics("michigan-data.png")
 ```
 
@@ -395,7 +395,7 @@ knitr::include_graphics("michigan-data.png")
 
 .panel[.panel-name[Alabama]
 
-```{r, out.width = "55%"}
+```{r, out.width = "40%"}
 knitr::include_graphics("alabama-data.png")
 ```
 
@@ -404,7 +404,7 @@ knitr::include_graphics("alabama-data.png")
 
 .panel[.panel-name[Arizona]
 
-```{r, out.width = "55%"}
+```{r, out.width = "40%"}
 knitr::include_graphics("arizona-data.png")
 ```
 
@@ -414,7 +414,7 @@ knitr::include_graphics("arizona-data.png")
 
 .panel[.panel-name[Mississippi]
 
-```{r, out.width = "55%"}
+```{r, out.width = "40%"}
 knitr::include_graphics("mississippi-data.png")
 ```
 
@@ -424,7 +424,7 @@ knitr::include_graphics("mississippi-data.png")
 
 .panel[.panel-name[South Carolina]
 
-```{r, out.width = "50%"}
+```{r, out.width = "40%"}
 knitr::include_graphics("sc-data.png")
 ```
 
