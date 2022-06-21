@@ -51,6 +51,8 @@ knitr::opts_chunk$set(
   )
 
 xaringanExtra::use_panelset()
+
+xaringanExtra::use_broadcast()
 ```
 
 #### .heat[ Agenda ]
