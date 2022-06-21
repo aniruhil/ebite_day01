@@ -146,9 +146,9 @@ Source: [A Needs Assessment Guidebook](https://oese.ed.gov/files/2020/10/needsas
 
 **(3) Stakeholder Engagement** 
 
-* Let local stakeholders drive the needs assessment, not a few leaders or an outside consultant 
+* Let **local stakeholders** drive the needs assessment, not a few leaders or an outside consultant 
 
-* Involve school staff, parents, even students (higher grades of course), local influencers (*but not the Kardashians*), business community 
+* **Involve** school staff, parents, even students (higher grades of course), local influencers (*but not the Kardashians*), business community 
 
 * Involvement should be in **all aspects and phases** of the needs assessment ... you will get buy-in, their sustained support, and trust in what you are trying to do 
 ]
@@ -168,11 +168,11 @@ Source: [A Needs Assessment Guidebook](https://oese.ed.gov/files/2020/10/needsas
 .pull-right[
 **(4) Collaborative Identification of Improvement Needs** 
 
-* Needs assessment should lead to a set of identified needs, prioritized areas of focus 
+* Needs assessment should lead to a set of **identified needs, prioritized areas of focus** 
 
-* Stakeholder-driven, very collaborative identification of improvement needs means everyone sees themselves in the data, increasing ownership and understanding of the process 
+* Stakeholder-driven, very **collaborative identification** of improvement needs means everyone sees themselves in the data, increasing ownership and understanding of the process 
 
-* Such a collaborative-approach shifts mindsets from a "mutually agreeable" approach to a "mutually beneficial" approach, building a team that recognizes the challenges but wants to move forward as one  
+* Such a collaborative-approach **shifts mindsets** from a "mutually agreeable" approach to a "mutually beneficial" approach, building a team that recognizes the challenges but wants to move forward as one  
 
 ]
 
@@ -200,15 +200,14 @@ Source: [A Needs Assessment Guidebook](https://oese.ed.gov/files/2020/10/needsas
 
 **Needs-Driven and Context-Specific Approach**
 
-* Compare data sources to the guiding questions and overarching topic framework to ensure that all included data respond to the needs assessment purpose and can be triangulated with other data sources. 
+* .heatinline[Compare data sources] to the guiding questions and overarching topic framework to ensure that all included data respond to the needs assessment purpose and can be triangulated with other data sources. 
 
-* Include data that describe the climate and culture of the organization and community. 
+* Include .heatinline[data that describe the climate and culture] of the organization and community. 
 
-* If looking at comparison data, consider other school districts and/or communities with similar demographics or organizational structures.
+* If looking at comparison data, consider other school districts and/or communities with .heatinline[similar demographics or organizational structures].
 
 
-* Identify and consider contextual information needed to understand the data or limitations in the data to avoid spurious or unrelated inferences about the data
-
+* Identify and consider .heatinline[contextual information needed to understand the data or limitations in the data] to avoid spurious or unrelated inferences about the data
 
 ]
 
@@ -228,21 +227,21 @@ Source: [A Needs Assessment Guidebook](https://oese.ed.gov/files/2020/10/needsas
 
 **Rigorous Data Analysis**
 
-* Disaggregate data wherever possible to help identify areas of need that otherwise may not be apparent. Consider the following: 
+* .heatinline[Disaggregate data wherever possible] to help identify areas of need that otherwise may not be apparent. Consider the following: 
     * Demographics (e.g., race, ethnicity, gender) 
     * Exceptional students (e.g., students with disabilities, gifted students, low-achieving students) 
     * Students with additional needs (e.g., students in foster care; those who are homeless or migratory; and/or those whose families are highly mobile, such as military families)
 
-* Aggregate observation data by grade level or grade band and perception data by stakeholder group.
+* .heatinline[Aggregate observation] data by grade level or grade band and perception data by stakeholder group.
 
 
-* Include longitudinal data (when possible) to aid in identifying any trends over time.
+* .heatinline[Include longitudinal data (when possible)] to aid in identifying any trends over time.
 
 
-* Create visuals (charts, tables, graphs) to help the reader digest information presented.
+* .heatinline[Create visuals] (charts, tables, graphs) to help the reader digest information presented.
 
 
-* Allow for reflection without assuming cause before data are triangulated across multiple sources.
+* .heatinline[Allow for reflection] without assuming cause before data are triangulated across multiple sources.
 
 ]
 
@@ -261,11 +260,11 @@ Source: [A Needs Assessment Guidebook](https://oese.ed.gov/files/2020/10/needsas
 .pull-right[
 **Stakeholder Engagement** 
 
-* Build stakeholders’ capacity to make informed decisions by engaging them in data collection, defining unfamiliar terminology, avoiding jargon, and ensuring access to necessary background information. 
+* .heatinline[Build stakeholders’ capacity to make informed decisions] by engaging them in data collection, defining unfamiliar terminology, avoiding jargon, and ensuring access to necessary background information. 
 
-* Ensure that stakeholders understand data used in the needs assessment, and display data in formats that are easy to interpret and analyze. 
+* .heatinline[Ensure stakeholders understand data] used in the needs assessment, and display data in formats that are easy to interpret and analyze. 
 
-* Encourage authentic engagement by setting clear expectations for participation, facilitate dialogue rather than presenting information in a lecture-style format, and commit to finding answers collaboratively. 
+* .heatinline[Encourage authentic engagement] by setting clear expectations for participation, facilitate dialogue rather than presenting information in a lecture-style format, and commit to finding answers collaboratively. 
 
 ]
 
@@ -285,15 +284,13 @@ Source: [A Needs Assessment Guidebook](https://oese.ed.gov/files/2020/10/needsas
 
 **Collaborative Identification of Improvement Needs**
 
-When preparing and organizing data to present, consider all stakeholders who will have a role in Interpreting Information and Prioritizing Needs, as well as the processes that will be used to complete these later steps. 
+When preparing and organizing data to present, .heatinline[consider all stakeholders who will have a role in Interpreting Information and Prioritizing Needs], as well as the processes that will be used to complete these later steps. 
 
-It is important to ensure that data presentation is clear and accessible for the intended audience.
+It is important to ensure that .heatinline[data presentation is clear and accessible] for the intended audience.
 
 ]
 
 ---
-
-
 
 .medium[
 
@@ -350,25 +347,13 @@ class: inverse, middle, center
     * An Ohio Example: [An Absenteeism Intervention Team Planning Checklist](https://www.escneo.org/Downloads/Absence%20Intervention%20Team%20and%20Plan%20Template2.pdf) 
     
     * An Illinois Example: [A Student Attendance Intervention Plan](https://www.escneo.org/Downloads/Student%20Attendance%20Intervention%20Plan%20-%20Illinois2.pdf) 
-    
+
+* However you gather whatever data you gather, if it is student-level data, it should be setup something like .heatinline[typical-student-level-data-setup.xlsx] 
+
 ]
 
 ```{r}
-countdown::countdown(minutes = 5, left = 0)
-```
-
----
-
-class: inverse, middle, center
-
-# Data Activity (2)
-
-.medium[
-However you gather whatever data you gather, if it is student-level data, it should be setup something like .heatinline[typical-student-level-data-setup.xlsx] 
-]
-
-```{r}
-countdown::countdown(minutes = 5, left = 0)
+countdown::countdown(minutes = 5, top = 0)
 ```
 
 ---
@@ -469,11 +454,8 @@ knitr::include_graphics("ohio-similar.png")
 library(tidyverse)
 
 readxl::read_excel(
-  here::here(
-    "State Depts of Ed Data/Michigan",
     "2020-21_School_Grades_Results.xlsx"
-    )
-  ) %>%
+    ) %>%
   slice_head(n = 2) -> midf
 
 DT::datatable(midf, options = list(
@@ -517,7 +499,7 @@ class: inverse, middle, center
 ]
 
 ```{r}
-countdown::countdown(minutes = 20, left = 0)
+countdown::countdown(minutes = 20, top = 0)
 ```
 
 ---
